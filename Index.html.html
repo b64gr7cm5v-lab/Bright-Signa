@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incentive X-Mas 2026</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f5f6f8;color:#18202a}
+.wrap{max-width:900px;margin:0 auto;padding:28px 18px 42px}
+.hero{background:linear-gradient(135deg,#18202a,#303946);color:#fff;border-radius:26px;padding:46px 24px;text-align:center;box-shadow:0 14px 35px rgba(0,0,0,.14)}
+.hero .icon{font-size:48px}
+.hero h1{margin:12px 0 8px;font-size:34px;letter-spacing:.4px}
+.hero p{margin:0;font-size:18px;opacity:.9}
+.countdown{background:#fff;border-radius:22px;padding:28px 18px;margin-top:22px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.countdown h2{margin:0;font-size:17px;letter-spacing:.8px;text-transform:uppercase}
+.timer{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.box{min-width:105px;padding:17px 10px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:15px}
+.num{display:block;font-size:34px;font-weight:900;line-height:1}
+.label{display:block;margin-top:8px;font-size:11px;font-weight:800;letter-spacing:.5px;color:#68727e}
+.message{margin-top:22px;background:#fff;border-radius:22px;padding:28px 22px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.message .main{font-size:23px;font-weight:850;line-height:1.35}
+.note{margin-top:22px;text-align:left;font-size:12px;line-height:1.7;color:#717b86}
+@media(max-width:600px){.hero h1{font-size:28px}.box{min-width:78px}.num{font-size:27px}.message .main{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div class="icon">🎄</div>
+<h1>INCENTIVE X-MAS 2026</h1>
+<p>01 SEPTEMBRIE – 31 DECEMBRIE 2026</p>
+</section>
+
+<section class="countdown">
+<h2>⏳ Timp rămas până la finalul campaniei</h2>
+<div class="timer">
+<div class="box"><span class="num" id="days">--</span><span class="label">ZILE</span></div>
+<div class="box"><span class="num" id="hours">--</span><span class="label">ORE</span></div>
+<div class="box"><span class="num" id="minutes">--</span><span class="label">MINUTE</span></div>
+<div class="box"><span class="num" id="seconds">--</span><span class="label">SECUNDE</span></div>
+</div>
+</section>
+
+<section class="message">
+<div class="main">🎯 Hai să facem împreună 100% din target și să începem anul cu banii în buzunar! 💰🚀</div>
+
+</section>
+</div>
+
+<script>
+const endDate = new Date("2026-12-31T23:59:59+02:00").getTime();
+function updateCountdown(){
+  let diff=Math.max(0,endDate-Date.now());
+  const days=Math.floor(diff/86400000); diff%=86400000;
+  const hours=Math.floor(diff/3600000); diff%=3600000;
+  const minutes=Math.floor(diff/60000); diff%=60000;
+  const seconds=Math.floor(diff/1000);
+  document.getElementById("days").textContent=String(days).padStart(2,"0");
+  document.getElementById("hours").textContent=String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent=String(seconds).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
