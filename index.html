@@ -3,112 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Incentive X-Mas 2026</title>
+
+<title>INCENTIVE X-MAS 2026</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f5f6f8;color:#18202a}
-.wrap{max-width:900px;margin:0 auto;padding:28px 18px 42px}
-.hero{background:linear-gradient(135deg,#18202a,#303946);color:#fff;border-radius:26px;padding:46px 24px;text-align:center;box-shadow:0 14px 35px rgba(0,0,0,.14)}
-.hero .icon{font-size:48px}
-.hero h1{margin:12px 0 8px;font-size:34px;letter-spacing:.4px}
-.hero p{margin:0;font-size:18px;opacity:.9}
-.countdown{background:#fff;border-radius:22px;padding:28px 18px;margin-top:22px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.07)}
-.countdown h2{margin:0;font-size:17px;letter-spacing:.8px;text-transform:uppercase}
-.timer{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap}
-.box{min-width:105px;padding:17px 10px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:15px}
-.num{display:block;font-size:34px;font-weight:900;line-height:1}
-.label{display:block;margin-top:8px;font-size:11px;font-weight:800;letter-spacing:.5px;color:#68727e}
-.message{margin-top:22px;background:#fff;border-radius:22px;padding:28px 22px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.07)}
-.message .main{font-size:23px;font-weight:850;line-height:1.35}
-.note{margin-top:22px;text-align:left;font-size:12px;line-height:1.7;color:#717b86}
-@media(max-width:600px){.hero h1{font-size:28px}.box{min-width:78px}.num{font-size:27px}.message .main{font-size:20px}}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #071b35, #0b3d5c);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 58px);
+    margin: 0 0 12px;
+}
+
+.period {
+    font-size: clamp(18px, 4vw, 30px);
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.box {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 18px;
+    padding: 24px 10px;
+}
+
+.number {
+    font-size: clamp(38px, 8vw, 70px);
+    font-weight: 800;
+}
+
+.label {
+    font-size: 14px;
+    margin-top: 7px;
+    letter-spacing: 1px;
+}
+
+.note {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.motivation {
+    margin-top: 35px;
+    font-size: clamp(19px, 4vw, 28px);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .countdown {
+        gap: 8px;
+    }
+
+    .box {
+        padding: 18px 5px;
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="wrap">
-<section class="hero">
-<div class="icon">🎄</div>
-<h1>INCENTIVE X-MAS 2026</h1>
-<p>01 SEPTEMBRIE – 31 DECEMBRIE 2026</p>
-</section>
 
-<section class="countdown">
-<h2>⏳ Timp rămas până la finalul campaniei</h2>
-<div class="timer">
-<div class="box"><span class="num" id="days">--</span><span class="label">ZILE</span></div>
-<div class="box"><span class="num" id="hours">--</span><span class="label">ORE</span></div>
-<div class="box"><span class="num" id="minutes">--</span><span class="label">MINUTE</span></div>
-<div class="box"><span class="num" id="seconds">--</span><span class="label">SECUNDE</span></div>
+<div class="container">
+
+<h1>🎄 INCENTIVE X-MAS 2026</h1>
+
+<div class="period">
+01 SEPTEMBRIE – 31 DECEMBRIE 2026
 </div>
-</section>
 
-<section class="message">
-<div class="main">🎯 Hai să facem împreună 100% din target și să începem anul cu banii în buzunar! 💰🚀</div>
+<div class="subtitle">
+⏰ Program: 09:00 – 21:00
+</div>
 
-</section>
+<div class="countdown">
+
+<div class="box">
+<div class="number" id="days">121</div>
+<div class="label">ZILE</div>
+</div>
+
+<div class="box">
+<div class="number" id="hours">12</div>
+<div class="label">ORE</div>
+</div>
+
+<div class="box">
+<div class="number" id="minutes">00</div>
+<div class="label">MINUTE</div>
+</div>
+
+<div class="box">
+<div class="number" id="seconds">00</div>
+<div class="label">SECUNDE</div>
+</div>
+
+</div>
+
+<div class="note">
+Zilele includ toate zilele calendaristice, inclusiv weekendurile.<br>
+Timpul din ore, minute și secunde se calculează doar între 09:00 și 21:00.
+</div>
+
+<div class="motivation">
+🎯 Hai să facem împreună 100% din target și să începem anul cu banii în buzunar! 💰🚀
+</div>
+
 </div>
 
 <script>
-const campaignStart = new Date("2026-09-01T09:00:00+03:00");
-const campaignEnd = new Date("2026-12-31T21:00:00+02:00");
 
-function updateCountdown(){
-  const now = new Date();
+const END_DATE = new Date("2026-12-31T21:00:00+02:00");
 
-  if (now < campaignStart) {
-    document.getElementById("days").textContent = "122";
-    document.getElementById("hours").textContent = "12";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
-    return;
-  }
+function pad(number) {
+    return String(number).padStart(2, "0");
+}
 
-  if (now >= campaignEnd) {
-    ["days","hours","minutes","seconds"].forEach(id => {
-      document.getElementById(id).textContent = "00";
-    });
-    return;
-  }
+function updateCountdown() {
 
-  // Calendar days remaining, including every calendar day.
-  const today = new Date(now);
-  today.setHours(0,0,0,0);
+    const now = new Date();
 
-  const endDay = new Date(campaignEnd);
-  endDay.setHours(0,0,0,0);
+    /*
+      ZILE = diferență calendaristică.
+      Nu folosim orele lucrătoare pentru calculul zilelor.
+    */
 
-  const daysRemaining = Math.max(
-    0,
-    Math.round((endDay - today) / 86400000)
-  );
+    const today = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate()
+    );
 
-  let hours = 12;
-  let minutes = 0;
-  let seconds = 0;
+    const finalDay = new Date(2026, 11, 31);
 
-  const h = now.getHours();
+    let days = Math.round(
+        (finalDay - today) / (1000 * 60 * 60 * 24)
+    );
 
-  // Countdown runs only during store hours: 09:00–21:00.
-  if (h >= 9 && h < 21) {
-    const close = new Date(now);
-    close.setHours(21,0,0,0);
-    let diff = Math.max(0, close - now);
+    if (days < 0) {
+        days = 0;
+    }
 
-    hours = Math.floor(diff / 3600000);
-    diff %= 3600000;
-    minutes = Math.floor(diff / 60000);
-    diff %= 60000;
-    seconds = Math.floor(diff / 1000);
-  }
+    /*
+      ORE / MINUTE / SECUNDE
+      se calculează separat, doar pentru intervalul 09:00–21:00.
+    */
 
-  document.getElementById("days").textContent = String(daysRemaining).padStart(2,"0");
-  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+    let hours = 12;
+    let minutes = 0;
+    let seconds = 0;
+
+    if (now >= END_DATE) {
+
+        days = 0;
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+
+    } else {
+
+        const currentHour = now.getHours();
+
+        if (currentHour >= 9 && currentHour < 21) {
+
+            const endOfWorkDay = new Date(now);
+
+            endOfWorkDay.setHours(21, 0, 0, 0);
+
+            let remainingSeconds = Math.floor(
+                (endOfWorkDay - now) / 1000
+            );
+
+            hours = Math.floor(
+                remainingSeconds / 3600
+            );
+
+            remainingSeconds =
+                remainingSeconds % 3600;
+
+            minutes = Math.floor(
+                remainingSeconds / 60
+            );
+
+            seconds =
+                remainingSeconds % 60;
+
+        } else {
+
+            /*
+              În afara programului rămânem la 12:00:00.
+            */
+
+            hours = 12;
+            minutes = 0;
+            seconds = 0;
+        }
+    }
+
+    document.getElementById("days").textContent =
+        days;
+
+    document.getElementById("hours").textContent =
+        pad(hours);
+
+    document.getElementById("minutes").textContent =
+        pad(minutes);
+
+    document.getElementById("seconds").textContent =
+        pad(seconds);
 }
 
 updateCountdown();
-setInterval(updateCountdown,1000);
+
+setInterval(updateCountdown, 1000);
+
 </script>
-<div style="text-align:center;margin-top:18px;font-size:14px;opacity:.8;">🕘 Countdown activ doar în intervalul <strong>09:00 – 21:00</strong></div></body>
+
+</body>
 </html>
